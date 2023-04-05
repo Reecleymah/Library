@@ -1,158 +1,242 @@
-<!Doctype HTML>
-<html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-    <div id="mySidenav" class="sidenav">
-    <p class="logo"><span>M</span>-SoftTech</p>
-    <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
-    <a href="#"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Customers</a>
-    <a href="#"class="icon-a"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Projects</a>
-    <a href="#"class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Orders</a>
-    <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Inventory</a>
-    <a href="#"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Accounts</a>
-    <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Tasks</a>
-    </div>
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	
+  <!-- My CSS -->
+	<link rel="stylesheet" href="styleind.css">
 
-    <div id="main">
-
-      <div class="head">
-        <div class="col-div-6">
-          <span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >&#9776; Dashboard</span>
-          <span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >&#9776; Dashboard</span>
-        </div>  
-
-        <div class="col-div-6">
-          <div class="profile">
-            <img src="images/user.png" class="pro-img" />
-            <p>Manoj Adhikari <span>UI / UX DESIGNER</span></p>
-          </div>
-        </div>
-
-        <div class="clearfix"></div>
-
-      </div>
-
-      <div class="clearfix"></div>
-      <br/>
-    
-    <div class="col-div-3">
-      <div class="box">
-        <p>67<br/><span>Customers</span></p>
-        <i class="fa fa-users box-icon"></i>
-      </div>
-    </div>
-    <div class="col-div-3">
-      <div class="box">
-        <p>88<br/><span>Projects</span></p>
-        <i class="fa fa-list box-icon"></i>
-      </div>
-    </div>
-    <div class="col-div-3">
-      <div class="box">
-        <p>99<br/><span>Orders</span></p>
-        <i class="fa fa-shopping-bag box-icon"></i>
-      </div>
-    </div>
-    <div class="col-div-3">
-      <div class="box">
-        <p>78<br/><span>Tasks</span></p>
-        <i class="fa fa-tasks box-icon"></i>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-    <br/><br/>
-    <div class="col-div-8">
-      <div class="box-8">
-      <div class="content-box">
-        <p>Top Selling Projects <span>Sell All</span></p>
-        <br/>
-        <table>
-    <tr>
-      <th>Company</th>
-      <th>Contact</th>
-      <th>Country</th>
-    </tr>
-    <tr>
-      <td>Alfreds Futterkiste</td>
-      <td>Maria Anders</td>
-      <td>Germany</td>
-    </tr>
-    <tr>
-      <td>Centro comercial Moctezuma</td>
-      <td>Francisco Chang</td>
-      <td>Mexico</td>
-    </tr>
-    <tr>
-      <td>Ernst Handel</td>
-      <td>Roland Mendel</td>
-      <td>Austria</td>
-    </tr>
-    <tr>
-      <td>Island Trading</td>
-      <td>Helen Bennett</td>
-      <td>UK</td>
-    </tr>
-    
-    
-  </table>
-      </div>
-    </div>
-    </div>
-
-    <div class="col-div-4">
-      <div class="box-4">
-      <div class="content-box">
-        <p>Total Sale <span>Sell All</span></p>
-
-        <div class="circle-wrap">
-      <div class="circle">
-        <div class="mask full">
-          <div class="fill"></div>
-        </div>
-        <div class="mask half">
-          <div class="fill"></div>
-        </div>
-        <div class="inside-circle"> 70% </div>
-      </div>
-    </div>
-      </div>
-    </div>
-    </div>
-      
-    <div class="clearfix"></div>
-  </div>
+	<title>AdminHub</title>
+</head>
+<body>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">AdminHub</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">My Store</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Message</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Team</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
 
-    $(".nav").click(function(){
-      $("#mySidenav").css('width','70px');
-      $("#main").css('margin-left','70px');
-      $(".logo").css('visibility', 'hidden');
-      $(".logo span").css('visibility', 'visible');
-      $(".logo span").css('margin-left', '-10px');
-      $(".icon-a").css('visibility', 'hidden');
-      $(".icons").css('visibility', 'visible');
-      $(".icons").css('margin-left', '-8px');
-        $(".nav").css('display','none');
-        $(".nav2").css('display','block');
-    });
 
-  $(".nav2").click(function(){
-      $("#mySidenav").css('width','300px');
-      $("#main").css('margin-left','300px');
-      $(".logo").css('visibility', 'visible');
-      $(".icon-a").css('visibility', 'visible');
-      $(".icons").css('visibility', 'visible');
-      $(".nav").css('display','block');
-        $(".nav2").css('display','none');
-  });
 
-  </script>
-  </body>
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download PDF</span>
+				</a>
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>1020</h3>
+						<p>New Order</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>2834</h3>
+						<p>Visitors</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-dollar-circle' ></i>
+					<span class="text">
+						<h3>$2543</h3>
+						<p>Total Sales</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Recent Orders</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>User</th>
+								<th>Date Order</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img src="img/people.png">
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td><span class="status completed">Completed</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/people.png">
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td><span class="status pending">Pending</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/people.png">
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td><span class="status process">Process</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/people.png">
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td><span class="status pending">Pending</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/people.png">
+									<p>John Doe</p>
+								</td>
+								<td>01-10-2021</td>
+								<td><span class="status completed">Completed</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="todo">
+					<div class="head">
+						<h3>Todos</h3>
+						<i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="script.js"></script>
+</body>
 </html>
