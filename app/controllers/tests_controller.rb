@@ -6,7 +6,7 @@ class TestsController < ApplicationController
     end
 
     def create
-        @test = Test.create(title: 
+        @test = Test.create(name: 
         params[:test][:name]
         )
         render json: @test
