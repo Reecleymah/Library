@@ -1,12 +1,12 @@
 <%= form_with(model: @test, local: true) do |form| %>
 
     <div>
-        <%= f.label :name%>
-        <%= f.text_field :name%>
+        <%= form.label :name%>
+        <%= form.text_field :name%>
     </div>
 
     <div>
-        <%= f.submit %>
+        <%= form.submit %>
     </div>
 
 <% end %>
