@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get 'library/index'
-  root 'library#index'
+  #root 'library#index'
   
-  get 'test/new', to: 'test#new'
-  post 'test', to: 'test#create'
+  get 'tests/new', to: 'tests#new'
+  post 'tests', to: 'tests#create'
   
   # root "articles#index"
 end
