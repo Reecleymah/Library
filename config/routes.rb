@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   #"test_path". Aqui el _path intenta siembre obtener la ruta osea /test/id y test es el nombre. 
 
   delete 'tests/:id', to: 'tests#destroy'
-
   post 'tests', to: 'tests#create'
+  
   root 'tests#new'
 
   # root "articles#index"
