@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'tests/new', to: 'tests#new'
   get 'library/index'
-  get 'tests/2', to: 'tests#show'
+  get 'tests/3', to: 'tests#show'
   post 'tests', to: 'tests#create'
   root 'tests#new'
 
