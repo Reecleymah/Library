@@ -1,18 +1,14 @@
 Rails.application.routes.draw do
-  get 'books/index'
-  get 'books/show'
-  get 'books/new'
-  get 'books/create'
-  get 'books/edit'
-  get 'books/update'
-  get 'books/destroy'
   #root 'library#index'
   
   #Rails es un framework que es convencion sobre configuracion,lo cual nos indica que
   #no debemos hacer muchas configuraciones.
 
+  get 'books/index', to: 'books#index'
+  get 'books/new', to: 'books#new'
+  post 'books', to: 'books#create'
+
   get 'tests/new', to: 'tests#new'
-  get 'library/index', to: 'library#index'
   get 'tests/:id', to: 'tests#show' #:id - Esto es un comodin, los comodines se define con ':' y un parametro en este caso 'id'
   get 'tests/:id/edit', to: 'tests#edit'
   
@@ -25,7 +21,7 @@ Rails.application.routes.draw do
   delete 'tests/:id', to: 'tests#destroy'
   post 'tests', to: 'tests#create'
 
-  root to: 'tests#new'
+  root to: 'books#new'
 
   # root "articles#index"
 end
