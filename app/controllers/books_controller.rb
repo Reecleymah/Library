@@ -15,7 +15,7 @@ class BooksController < ApplicationController
       title: 
           params[:book][:tite],
       autor: 
-          params[:book][:title],
+          params[:book][:autor],
       isbn: 
           params[:book][:isbn],
       )
