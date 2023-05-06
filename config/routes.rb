@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   #root 'library#index'
   
+  resources :test
+
   #Rails es un framework que es convencion sobre configuracion,lo cual nos indica que
   #no debemos hacer muchas configuraciones.
 
@@ -17,7 +19,7 @@ Rails.application.routes.draw do
 
   delete 'tests/:id', to: 'tests#destroy'
   post 'tests', to: 'tests#create'
-  
+
   root 'tests#new'
 
   # root "articles#index"

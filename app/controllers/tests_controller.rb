@@ -58,7 +58,7 @@ class TestsController < ApplicationController
 
         @test = Test.find(params[:id])
         @test.destroy
-        redirect_to root_path
+        redirect_to root_path, notice: 'El libro fue eliminado correctamente.'
 
     end
 
