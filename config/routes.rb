@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'tests/:id', to: 'tests#show' #:id - Esto es un comodin, los comodines se define con ':' y un parametro en este caso 'id'
   get 'tests/:id/edit', to: 'tests#edit'
   
-  patch '/tests/:id', to: 'tests#update' as: :test
+  patch '/tests/:id', to: 'tests#update', as: :test
   
   #La parte del codigo as: :test es definir el nombre de la ruta, esto es por que si no
   #definimos esta ruta se nos mostrará un error indicandonos que el siguiente metodo no esta definido
