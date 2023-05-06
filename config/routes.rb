@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   #root 'library#index'
   
-  resources :tests
-
   #Rails es un framework que es convencion sobre configuracion,lo cual nos indica que
   #no debemos hacer muchas configuraciones.
 
