@@ -2,31 +2,25 @@ class TestsController < ApplicationController
 
     def show
         
-        =begin
-            Colocaremos el comodin para recibirlo como parametro para saber que buscar
-            params[] es donde recibimos todos los paramtros de donde sea que provengan
-        =end
+        #Colocaremos el comodin para recibirlo como parametro para saber que buscar
+        #params[] es donde recibimos todos los paramtros de donde sea que provengan
         
         @test= Test.find(params[:id]) 
 
-        =begin
-            Puede ser con ':id' o puede colocarse así @test= Test.find(params['id'])
-            Se usan los dos puntos por que es un simbolo.
-        =end
+        #Puede ser con ':id' o puede colocarse así @test= Test.find(params['id'])
+        #Se usan los dos puntos por que es un simbolo.
 
     end
 
     def edit
 
         @test = Test.find(params[:id])
+ 
+        #Forma de saber si un objeto esta guardado en la base de datos, osea una instancia de un modelo esta guardada
+        #Es utilizar puts "\n\n\n #{@test.persisted?} \n\n\n"
 
-        =begin 
-            Forma de saber si un objeto esta guardado en la base de datos, osea una instancia de un modelo esta guardada
-            Es utilizar puts "\n\n\n #{@test.persisted?} \n\n\n"
-
-            Es importante mencionar  que el comando anterior imprimira en la terminal, y en caso de que
-            si se encuentre en la base de datos mostrara true en caso contrario mostrará false.
-        =end
+        #Es importante mencionar  que el comando anterior imprimira en la terminal, y en caso de que
+        #si se encuentre en la base de datos mostrara true en caso contrario mostrará false.
     end
 
     def update # Método del objeto por eso usamos @test.update
