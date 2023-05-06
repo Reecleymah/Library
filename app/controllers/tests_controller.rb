@@ -1,5 +1,9 @@
 class TestsController < ApplicationController
 
+    def show
+        @test= Test.find(2)
+    end
+
     def new
         @test = Test.new
         @test.name = 'Dune'
