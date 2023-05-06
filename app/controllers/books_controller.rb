@@ -13,7 +13,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.create(
       title: 
-          params[:book][:tite],
+          params[:book][:title],
       autor: 
           params[:book][:autor],
       isbn: 
