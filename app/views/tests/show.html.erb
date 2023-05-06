@@ -1,6 +1,6 @@
 <h1> <%= @test.name %> </h1>
 <div>
-    <%= @test.author%>
+    <%= @test.content%>
 </div>
 
 <div>
@@ -10,6 +10,6 @@
         con que intenciones o con que verbo quiero acceder a esa ruta :delete 
     -->
 
-    <%= link_to "Eliminar el libro", test_path(@test) , method: :delete %>
+    <%=link_to "Eliminar el libro", @test , method: :delete %>
 
 </div>
