@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>title</th>
+      <th>autor</th>
+      <th>isbn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tests.each do |test| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.autor %></td>
+        <td><%= book.isbn %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
