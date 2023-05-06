@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   #no debemos hacer muchas configuraciones.
 
   get 'tests/new', to: 'tests#new'
-  get 'library/index'
+  get 'library/index', to: 'test#index'
   get 'tests/:id', to: 'tests#show' #:id - Esto es un comodin, los comodines se define con ':' y un parametro en este caso 'id'
   get 'tests/:id/edit', to: 'tests#edit'
   
