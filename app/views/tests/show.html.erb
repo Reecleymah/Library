@@ -2,3 +2,14 @@
 <div>
     <%= @test.author%>
 </div>
+
+<div>
+    
+    <!--
+        Con esto definimos a que recurso quiro ir @test y 
+        con que intenciones o con que verbo quiero acceder a esa ruta :delete 
+    -->
+    
+    <%= link_to "Eliminar el libro", @test, method: :delete %>
+
+</div>

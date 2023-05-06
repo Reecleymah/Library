@@ -54,4 +54,12 @@ class TestsController < ApplicationController
         render json: @test
     end
 
+    def destroy
+
+        @test = Test.find(params[:id])
+        @test.destroy
+        redirect_to root_path
+
+    end
+
 end
