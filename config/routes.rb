@@ -15,10 +15,10 @@ Rails.application.routes.draw do
   #definimos esta ruta se nos mostrará un error indicandonos que el siguiente metodo no esta definido
   #"test_path". Aqui el _path intenta siembre obtener la ruta osea /test/id y test es el nombre. 
 
-  delete 'tests/:id', to: 'tests#destroy'
+  delete '/tests/:id', to: 'tests#destroy'
   post 'tests', to: 'tests#create'
 
-  root 'tests#new'
+  root to: 'tests#new'
 
   # root "articles#index"
 end
