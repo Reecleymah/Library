@@ -159,12 +159,13 @@
 							</tr>
 						</thead>
 						<tbody>
+							<% @tests.each do |test| %>
 							<tr>
 								<td>
 									<img src="img/people.png">
-									<p>Dune</p>
+									<p><%= test.name %></p>
 								</td>
-								<td>by Frank Herbert</td>
+								<td>by <%= test.author %></td>
 								<td><span class="status completed">Available</span></td>
 							</tr>
 							<tr>
