@@ -1,0 +1,27 @@
+<%= form_with(model: @test, local: true) do |form| %>
+
+    <!--
+        Como sabemos Rails es mucho de convenciones, la convencion cuando pasamos a form_with
+        un objeto que ya esta guardado en la base de datos es tratar de enviar este formulario
+        a una ruta que '/tests/:id' con los verbos PUT/PATCH de http.
+
+        Por lo tanto si intentamos pasar un objeto @test que ya esta en la base de datos a form_with
+        va a tratar de hacer una de estas peticiones PUT/PATCH '/test/:id' hacia el bakend
+
+    -->
+
+    <div>
+        <%= form.label :name%>
+        <%= form.text_field :name%>
+    </div>
+
+    <div>
+        <%= form.label :content %>
+        <%= form.rich_text_area :content %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+
+<% end %>
