@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   #no debemos hacer muchas configuraciones.
 
   get 'books/index', to: 'books#index'
+  get 'books/:id', to: 'books#show'
   get 'books/new', to: 'books#new'
   post 'books', to: 'books#create'
 

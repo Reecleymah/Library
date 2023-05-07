@@ -17,7 +17,7 @@ class BooksController < ApplicationController
     @book.imagen.attach(params[:book][:imagen])
     
     if @book.save
-      redirect_to @book
+      redirect_to root_path
     else
       render :new
     end
