@@ -18,6 +18,8 @@ class BooksController < ApplicationController
           params[:book][:autor],
       isbn: 
           params[:book][:isbn],
+      imagen: 
+          params[:book][:imagen],
       )
   end
 
