@@ -17,6 +17,7 @@
   </tbody>
 </table>-->
 
+<%= stylesheet_link_tag 'tailwind.output.css', media: 'all' %>
 
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
@@ -29,12 +30,11 @@
     <title>Windmill Dashboard</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <!--<link rel="stylesheet" href="./assets/css/tailwind.output.css" />-->
-    <%= stylesheet_link_tag 'tailwind.output.css', media: 'all' %>
-
+    <link rel="stylesheet" href="./assets/stylesheets/tailwind.output.css" />
+    
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="./assets/javascripts/init-alpine.js"></script>
-    
+
   </head>
   
   <body>
