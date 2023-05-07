@@ -1,9 +1,19 @@
-<% @book.each do |book| %>
-  <div>
-    <h2><%= book.title %></h2>
-    <p><%= book.autor %></p>
-    <p><%= book.isbn %></p>
-    
- </div>
- <% end %>
-
+<table>
+  <thead>
+    <tr>
+      <th>title</th>
+      <th>autor</th>
+      <th>isbn</th>
+      <th>image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @book.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.autor %></td>
+        <td><%= book.isbn %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
