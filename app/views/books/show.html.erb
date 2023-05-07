@@ -1,6 +1,12 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
-<div>
-    <%= image_tag @book.image if @libro.imagen.attached? %>
-</div>
-
+<% @books.each do |book| %>
+  <div>
+    <h2><%= book.title %></h2>
+    <p><%= book.autor %></p>
+    <p><%= book.isbn %></p>
+    <% if book.imagen.attached? %>
+      <%= image_tag url_for(book.imagen.variant(resize: "100x100")), alt: book.title, class: "book-image" %>
+    <% else %>
+      <p>No image available</p>
+    <% end %>
+  </div>
+<% end %>
