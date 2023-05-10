@@ -839,21 +839,21 @@
               class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800"
             >
               <%= form_with(model: @book, local: true) do |form| %>
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400"><%= form.label :title%></span>
+                  <div class="block text-sm">
+                    <%= form.label :title(class="text-gray-700 dark:text-gray-400")%>
                     <%= form.text_field :title(class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input")%>
-                  </label>
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400"><%= form.label :autor%></span>
+                  </div>
+                  <div class="block text-sm">
+                    <%= form.label :autor(class="text-gray-700 dark:text-gray-400")%>
                     <%= form.text_field :autor(class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input")%>
-                  </label>
-                  <label class="block text-sm">
-                    <span class="text-gray-700 dark:text-gray-400"><%= form.label :isbn%></span>
+                  </div>
+                  <div class="block text-sm">
+                    <%= form.label :isbn(class="text-gray-700 dark:text-gray-400")%>
                     <%= form.text_field :isbn(class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input")%>
-                  </label>
+                  </div>
 
                   <div>
-                      <%= form.label :imagen %>
+                      <%= form.label :imagen%>
                       <%= form.file_field :imagen, accept: 'image/jpeg,image/png,image/webp' %>
                   </div>
 
