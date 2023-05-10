@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   #Rails es un framework que es convencion sobre configuracion,lo cual nos indica que
   #no debemos hacer muchas configuraciones.
 
-  get 'books/index', to: 'books#index'
+  get 'books/index', to: 'books#add_forms'
+  get 'books/add_book', to: 'books#index'
   get 'books/:id', to: 'books#show'
   get 'books/new', to: 'books#new'
   post 'books', to: 'books#create'
