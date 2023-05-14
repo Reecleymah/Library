@@ -9,9 +9,7 @@ class BooksController < ApplicationController
   end
 
   def add_book
-
-    @book = Book.add_forms
-
+    @book = Book.new
   end
 
   def show
@@ -30,7 +28,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to root_path
     else
-      render :new
+      render :add_form
     end
 
   end
