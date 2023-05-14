@@ -8,9 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    
     <%= stylesheet_link_tag 'tailwind.output.css'%>
-    <!--<%= stylesheet_link_tag 'button_file.css'%>-->
 
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
@@ -1179,3 +1177,31 @@
     </div>
   </body>
 </html>
+
+<%= form_with(model: @book, local: true) do |form| %>
+
+    <div>
+        <%= form.label :title%>
+        <%= form.text_field :title%>
+    </div>
+
+    <div>
+        <%= form.label :autor%>
+        <%= form.text_field :autor%>
+    </div>
+
+    <div>
+        <%= form.label :isbn%>
+        <%= form.text_field :isbn%>
+    </div>
+
+     <div>
+        <%= form.label :imagen %>
+        <%= form.file_field :imagen, accept: 'image/jpeg,image/png,image/webp' %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+
+<% end %>
