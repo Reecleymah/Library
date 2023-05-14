@@ -8,6 +8,19 @@ class BooksController < ApplicationController
     @book = Book.all
   end
 
+  def add_book
+
+    @book = Book.new(book_params)
+    @book.imagen.attach(params[:book][:imagen])
+    
+    if @book.save
+      redirect_to root_path
+    else
+      render :new
+    end
+
+  end
+
   def show
     @book= Book.find(params[:id]) 
   end
