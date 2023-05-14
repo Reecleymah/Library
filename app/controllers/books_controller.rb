@@ -4,6 +4,10 @@ class BooksController < ApplicationController
     @book = Book.all
   end
 
+  def repository
+    @book = Book.all
+  end
+
   def show
     @book= Book.find(params[:id]) 
   end
