@@ -8,7 +8,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    
     <%= stylesheet_link_tag 'tailwind.output.css'%>
+    <%= stylesheet_link_tag 'button_file.css'%>
 
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
@@ -1138,7 +1140,7 @@
 
                   <%= form.file_field :imagen, 
                       accept: 'image/jpeg,image/png,image/webp',
-                      class: 'absolute inset-y-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-l-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray'
+                      class: 'upload-box'
                   %>
 
                   <!--<button
