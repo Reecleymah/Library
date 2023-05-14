@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'books/index', to: 'books#index'
   get 'books/add_book', to: 'books#add_forms'
+  get 'books/repository', to: 'books#repository'
   get 'books/:id', to: 'books#show'
   get 'books/new', to: 'books#new'
   post 'books', to: 'books#create'
