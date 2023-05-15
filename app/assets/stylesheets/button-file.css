@@ -1,6 +1,6 @@
 .upload—box {
     font—size: 16px;
-    background: #7e3af2 ;
+    background: transparent ;
     border—radius: 50px;
     box—shadow: 5px 5px 10px black;
     width: 350px;
@@ -10,7 +10,7 @@
 ::-webkit-file-upload-button{
 
     color: white;
-    background: #206a5d;
+    background: #7e3af2;
     padding: 20px;
     border: none;
     border-radius: 50px;
