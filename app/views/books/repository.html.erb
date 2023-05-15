@@ -8,12 +8,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
+    <%= stylesheet_link_tag 'tailwind.output.css'%>
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <script src="./assets/js/init-alpine.js"></script>
+    <%= javascript_include_tag "init-alpine.js" %>
   </head>
   <body>
     <div
@@ -773,7 +773,7 @@
                               class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
                             >
                               <% if book.imagen.attached? %>
-                                <% resized_image = book.imagen.variant(resize: '300x300') %>
+                                <% resized_image = book.imagen%>
                                 <% image_url = url_for(resized_image) %>
                                 <%= image_tag image_url %>
                               <% else %>
