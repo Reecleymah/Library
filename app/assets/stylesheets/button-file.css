@@ -1,10 +1,10 @@
 .upload—box {
-    font-size: 16px;
+    font-size: 14px;
     color: white;
     background: #24262D ;
     border-radius: 50px;
     box-shadow: 5px 5px 10px black;
-    width: 350px;
+    width: 650px;
     outline: none;
 }
 
