@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <%= stylesheet_link_tag 'tailwind.output.css'%>
+    <%= stylesheet_link_tag 'button-file.css'%>
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
@@ -967,7 +968,8 @@
                   />
                   <%= form.file_field :imagen, 
                       #class: "block w-full pl-20 mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input",
-                      class: "absolute inset-y-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-l-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray",
+                      #class: "absolute inset-y-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-l-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray",
+                      class: "upload—box",
                       accept: 'image/jpeg,image/png,image/webp'
                   %> 
                  
