@@ -23,9 +23,9 @@ class BooksController < ApplicationController
   def create
 
     @book = Book.new(book_params)
-    @book.imagen.attach(params[:book][:imagen])
     
     if @book.save
+      @book.imagen.attach(params[:book][:imagen])
       redirect_to root_path
     else
       render :add_form
