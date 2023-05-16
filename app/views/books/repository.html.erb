@@ -775,7 +775,7 @@
                               <% if book.imagen.attached? %>
                                 <% resized_image = book.imagen%>
                                 <% image_url = url_for(resized_image) %>
-                                <%= image_tag image_url, class: "object-cover w-full h-full rounded-full" %>
+                                <%= image_tag image_url %>
                               <% else %>
                                   <span>No Image</span>
                               <% end %>
