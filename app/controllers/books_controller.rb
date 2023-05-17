@@ -38,10 +38,22 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title, :autor, :isbn, :genre)
   end
 
+  private
+  def book_params_update
+    params.require(:book).permit(:title, :autor, :isbn, :genre, :image)
+  end
+
   def edit
+    @book = Book.find(params[:id])
   end
 
   def update
+    
+    @book = Book.find(params[:id])
+    @book.update(book_params_update)
+
+    redirect_to root_path
+
   end
 
   def destroy
