@@ -32,7 +32,7 @@ class BooksController < ApplicationController
     end
 
   end
-  
+
   def edit
     @book = Book.find(params[:id])
   end
@@ -47,6 +47,9 @@ class BooksController < ApplicationController
   end
 
   def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    redirect_to root_path
   end
 
   private
