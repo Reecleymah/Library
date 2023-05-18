@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'books/repository', to: 'books#repository'
   get 'books/:id', to: 'books#show'
   get 'books/new', to: 'books#new'
-  get 'books/:id/edit', to: 'books#edit'
+  get 'books/:id/edit', to: 'books#edit' as: 'edit_book'
   
   post 'books', to: 'books#create'
   patch 'books/:id', to: 'books#update', as: :book
