@@ -33,16 +33,6 @@ class BooksController < ApplicationController
 
   end
   
-  private
-  def book_params
-    params.require(:book).permit(:title, :autor, :isbn, :genre)
-  end
-
-  private
-  def book_params_update
-    params.require(:book).permit(:title, :autor, :isbn, :genre, :image)
-  end
-
   def edit
     @book = Book.find(params[:id])
   end
@@ -58,4 +48,15 @@ class BooksController < ApplicationController
 
   def destroy
   end
+
+  private
+  def book_params
+    params.require(:book).permit(:title, :autor, :isbn, :genre)
+  end
+
+  private
+  def book_params_update
+    params.require(:book).permit(:title, :autor, :isbn, :genre, :image)
+  end
+
 end
