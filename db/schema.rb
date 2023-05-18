@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_18_062535) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_18_061359) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -62,15 +62,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_18_062535) do
     t.string "genre"
   end
 
-  create_table "favorites", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "book_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_favorites_on_book_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
-  end
-
   create_table "tests", force: :cascade do |t|
     t.string "name"
     t.string "author"
@@ -89,6 +80,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_18_062535) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "favorites", "books"
-  add_foreign_key "favorites", "users"
 end
