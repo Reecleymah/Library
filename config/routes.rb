@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   delete 'books/:id', to: 'books#destroy'
 
+  devise_for :users
+
   get 'tests/new', to: 'tests#new'
   get 'tests/:id', to: 'tests#show' #:id - Esto es un comodin, los comodines se define con ':' y un parametro en este caso 'id'
   get 'tests/:id/edit', to: 'tests#edit'
