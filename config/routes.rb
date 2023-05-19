@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   
   #Rails es un framework que es convencion sobre configuracion,lo cual nos indica que
   #no debemos hacer muchas configuraciones.
-
-  
  
   # Rutas accesibles solo para usuarios administradores
   get 'books/index', to: 'books#index'
@@ -20,9 +18,15 @@ Rails.application.routes.draw do
   
   delete 'books/:id', to: 'books#destroy'
 
-  post 'favorites/add', to: 'favorites#add', as: 'add_to_favorites'
-  delete 'favorites/remove', to: 'favorites#remove', as: 'remove_from_favorites'
-
+  authenticated :user, ->(user) { !user.user? } do
+    
+    root to: 'favorites#add'
+    
+    post 'favorites/add', to: 'favorites#add', as: 'add_to_favorites'
+    delete 'favorites/remove', to: 'favorites#remove', as: 'remove_from_favorites'
+  
+  end
+  
 
   get 'tests/new', to: 'tests#new'
   get 'tests/:id', to: 'tests#show' #:id - Esto es un comodin, los comodines se define con ':' y un parametro en este caso 'id'
