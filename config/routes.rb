@@ -16,15 +16,7 @@ Rails.application.routes.draw do
   post 'books', to: 'books#create'
   patch 'books/:id', to: 'books#update', as: :book
   
-  delete 'books/:id', to: 'books#destroy'
-
-  authenticated :user, ->(user) { !user.user? } do
-    
-    post 'favorites/add', to: 'favorites#add', as: 'add_to_favorites'
-    delete 'favorites/remove', to: 'favorites#remove', as: 'remove_from_favorites'
-  
-  end
-  
+  delete 'books/:id', to: 'books#destroy'  
 
   get 'tests/new', to: 'tests#new'
   get 'tests/:id', to: 'tests#show' #:id - Esto es un comodin, los comodines se define con ':' y un parametro en este caso 'id'
