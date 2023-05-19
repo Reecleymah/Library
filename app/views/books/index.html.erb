@@ -945,3 +945,21 @@
     </div>
   </body>
 </html>
+
+<% if current_user %>
+
+  <p>Hello <%= current_user.email %></p>
+  <p>
+
+      You have successfuly authenticated with your Devise account.
+      You are now ready to interact with this application.
+
+  </p>
+
+<% else %>
+
+  <p>You are not signed in.</p>
+  <%= link_to "Sign Up!", new_user_registration_path %>
+  <%= link_to "Login", new_user_session_path %>
+
+<% end %>
