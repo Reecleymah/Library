@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
     before_action :authenticate_user!
-    before_action :check_admin
+    before_action :check_admin, except: [:new, :create, :edit, :update]
 
     private
 
