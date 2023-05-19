@@ -39,7 +39,9 @@ Rails.application.routes.draw do
   delete 'tests/:id', to: 'tests#destroy'
   post 'tests', to: 'tests#create'
 
-  root to: 'books#index'
+  #root to: 'books#index'
+
+  root to: 'devise/sessions#new'
 
   # root "articles#index"
 end
