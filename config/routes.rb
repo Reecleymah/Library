@@ -20,8 +20,6 @@ Rails.application.routes.draw do
 
   authenticated :user, ->(user) { !user.user? } do
     
-    root to: 'favorites#add'
-    
     post 'favorites/add', to: 'favorites#add', as: 'add_to_favorites'
     delete 'favorites/remove', to: 'favorites#remove', as: 'remove_from_favorites'
   
