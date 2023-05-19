@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  
   devise_for :users
   
+  devise_scope :user do
+    get 'users/sign_out', to: 'devise/sessions#destroy'
+  end  
+
   #Rails es un framework que es convencion sobre configuracion,lo cual nos indica que
   #no debemos hacer muchas configuraciones.
 
