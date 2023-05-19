@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'favorites/add'
-  get 'favorites/remove'
   
   devise_for :users
   
@@ -20,6 +18,9 @@ Rails.application.routes.draw do
   patch 'books/:id', to: 'books#update', as: :book
   
   delete 'books/:id', to: 'books#destroy'
+
+  post 'favorites/add', to: 'favorites#add', as: 'add_to_favorites'
+  delete 'favorites/remove', to: 'favorites#remove', as: 'remove_from_favorites'
 
 
   get 'tests/new', to: 'tests#new'
