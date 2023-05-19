@@ -1,6 +1,6 @@
 <% if current_user %>
 
-  <% if current_user.user? %>
+  <% if current_user.admin? %>
 
     <!DOCTYPE html>
     <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
