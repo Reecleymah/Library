@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   #Rails es un framework que es convencion sobre configuracion,lo cual nos indica que
   #no debemos hacer muchas configuraciones.
 
+  
  
   # Rutas accesibles solo para usuarios administradores
   get 'books/index', to: 'books#index'
