@@ -928,7 +928,13 @@
       </body>
     </html>
 
+  <% else if current_user.user? %>
+
+    redirect_to add_favorites_path(book_id: book.id)
+
   <% end %>
+
+
 
   <!--<p>Hello <%= current_user.email %></p>
   <p>You are a [<%= current_user.role %>]</p>
