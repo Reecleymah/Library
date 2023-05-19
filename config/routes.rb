@@ -1,20 +1,25 @@
 Rails.application.routes.draw do
-  #root 'library#index'
+  devise_for :users
   
   #Rails es un framework que es convencion sobre configuracion,lo cual nos indica que
   #no debemos hacer muchas configuraciones.
 
-  get 'books/index', to: 'books#index'
-  get 'books/add_book', to: 'books#new'
-  get 'books/repository', to: 'books#repository'
-  get 'books/:id', to: 'books#show'
-  get 'books/new', to: 'books#new'
-  get 'books/:id/edit', to: 'books#edit', as: 'edit_book'
+  authenticate :user, ->(user) { user.admin? } do
+   
+    # Rutas accesibles solo para usuarios administradores
+    get 'books/index', to: 'books#index'
+    get 'books/add_book', to: 'books#new'
+    get 'books/repository', to: 'books#repository'
+    get 'books/:id', to: 'books#show'
+    get 'books/new', to: 'books#new'
+    get 'books/:id/edit', to: 'books#edit', as: 'edit_book'
+    
+    post 'books', to: 'books#create'
+    patch 'books/:id', to: 'books#update', as: :book
   
-  post 'books', to: 'books#create'
-  patch 'books/:id', to: 'books#update', as: :book
+    delete 'books/:id', to: 'books#destroy'
 
-  delete 'books/:id', to: 'books#destroy'
+  end
 
   get 'tests/new', to: 'tests#new'
   get 'tests/:id', to: 'tests#show' #:id - Esto es un comodin, los comodines se define con ':' y un parametro en este caso 'id'
