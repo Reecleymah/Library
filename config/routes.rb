@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'favorites/add'
+  get 'favorites/remove'
   
   devise_for :users
   
