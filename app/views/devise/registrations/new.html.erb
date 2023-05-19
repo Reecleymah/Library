@@ -25,9 +25,9 @@
           <div class="flex flex-col overflow-y-auto md:flex-row">
             <div class="h-32 md:h-auto md:w-1/2">
               
-              <%= image_tag("assets/images/create-account-office.jpeg", class: "object-cover w-full h-full dark:hidden") %> 
+              <%= image_tag("create-account-office.jpeg", class: "object-cover w-full h-full dark:hidden") %> 
               
-              <%= image_tag("assets/images/create-account-office-dark.jpeg", class: "hidden object-cover w-full h-full dark:block") %> 
+              <%= image_tag("create-account-office-dark.jpeg", class: "hidden object-cover w-full h-full dark:block") %> 
 
               <!--<img
                 aria-hidden="true"
@@ -104,6 +104,8 @@
                 </a>-->
 
                 <hr class="my-8" />
+
+                <%= link_to "Log in!", new_user_session_path, class: "flex items-center justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-white text-gray-700 transition-colors duration-150 border border-gray-300 rounded-lg dark:text-gray-400 active:bg-transparent hover:border-gray-500 focus:border-gray-500 active:text-gray-500 focus:outline-none focus:shadow-outline-gray" %>
 
               </div>
             </div>
